@@ -282,5 +282,21 @@ namespace SpeckleCommon
             Hash = Type + "." + SpeckleConverter.GetHash(mesh);
         }
     }
+    
+    public class SpeckleTextDot : SpeckleObject
+    {
+        public string Text { get; set; }
+        public SpecklePoint Loc { get; set; }
+        
+        public SpeckleTextDot() { }
+        
+        public SpeckleTextDot(string text, SpecklePoint loc)
+        {
+            Type = "TextDot";
+            Text = text;
+            Loc = loc;
+            Hash = Type + "." + SpeckleConverter.GetHash(this);
+        }
+    }
 
 }
